@@ -20,18 +20,12 @@ const Header = () =>{
         <span></span>
          </div>
          
-      <div 
-      className={`burger ${isOpen ? 'open' : ''} mobile_header`}
-      >
-        <div 
-        className='mobile_backgrond'>
-      </div>
+      <div className={`burger ${isOpen ? 'open' : ''} mobile_header`}>
+     <div className='mobile_backgrond'></div>
      <div className='mobile_menu_header'> 
      <div className="header_logo"></div>
      <div className='header_close' onClick={toggleMenu}></div>
-    
     </div>
-
     <hr/>
      <div className='mobile_nav'>
         <ul className='mobile_menu'>
@@ -49,7 +43,6 @@ const Header = () =>{
         </ul>
      </div>
       </div>
-      
      <div className="header_logo"></div>
      <div className="header_icon"></div>
     </div> 

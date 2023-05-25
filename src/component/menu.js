@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import '../style/Header.css'
 
 
 const Menu =()=>{
+
+    useEffect(() => {
+        const handleScroll = () => {
+          const menuContainer = document.querySelector('.menu-container');
+          const scrollPosition = window.pageYOffset;
+    
+          if (scrollPosition >= 200) {
+            menuContainer.classList.add('menu-container--scrolled');
+          } else {
+            menuContainer.classList.remove('menu-container--scrolled');
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+      
     return(
-        <nav>
+        <nav className='menu-container'>
      <div class="menu">
     <ul>
       <li>

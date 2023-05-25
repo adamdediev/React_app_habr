@@ -160,13 +160,13 @@ hr{
   position: absolute;
   left: 0px;
   top: 0;
-  display: block;
+  display: none;
   background: #ffff;
   z-index: 10000;
   height: 220vw;
 }
 .open{
-  display: none;
+  display: block;
 }
 .mobile_menu_header{
   display: flex;
@@ -190,6 +190,16 @@ hr{
   width: 100vw;
   height: 220vw;
   position: absolute;
+}
+.menu-container--scrolled {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+.menu-container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
 }
 @media (max-width:600px) {
      .header_burger{
